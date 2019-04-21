@@ -1,0 +1,10 @@
+.appHeader{
+    padding: 15px;
+    background: #a1c9ea;
+    border-radius: 5px;
+}
+.appRow{
+    padding: 35px;
+    border: 1px solid #dcd9d9;
+    border-radius: 7px;
+}

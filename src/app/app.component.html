@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row appHeader">
+    <div class="col-sm-12">
+      <h2 class="">ACCOUNT APP</h2>
+    </div>
+  </div>
+    <div class="row appRow">
+      <div class="col-sm-3">
+        <h5><b>All Profile</b></h5>
+        <hr>
+        <app-profile
+         *ngFor = "let profile of profiles let i = index"
+         [profile] = profile
+         [index] = "i"
+         (click) = eachProfileData(profile,i)
+         ></app-profile>
+      </div>
+      <div class="col-sm-8">
+        <app-account-cockpit></app-account-cockpit>
+        <hr>
+        <div>
+            <app-account        
+            *ngFor = "let account of accounts"
+            [accountDetails] = "account">
+            </app-account>
+        </div>
+        <div *ngIf="cockpitAccount">
+            <app-account        
+            *ngFor = "let account of accountInProfile"
+            [accountDetails] = "account">
+            </app-account>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
