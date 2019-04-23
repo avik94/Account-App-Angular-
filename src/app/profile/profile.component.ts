@@ -8,8 +8,8 @@ import { ProfileService } from "../services/profile.service";
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  @Input() profile:Profile
-  @Input() index:Number
+  @Input() profile:Profile;
+  @Input() index:number;
 
   constructor(private profileService:ProfileService) { }
 

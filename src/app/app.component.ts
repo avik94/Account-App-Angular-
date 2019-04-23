@@ -21,10 +21,12 @@ export class AppComponent implements OnInit {
       profileService.deleteEvent.subscribe(
         (index) =>{
           profileService.deleteProfile(index)
-          this.accountInProfile.splice(index,1)
+          this.accountInProfile.splice(index)
           console.log(this.accountInProfile)
-        }
+          // this.accountInProfile.splice(0);
+        }        
       )
+      
   }
   ngOnInit(){
     this.accounts = this.accountService.getAccounts();
@@ -32,12 +34,10 @@ export class AppComponent implements OnInit {
   }
   eachProfileData(data,i){
     this.accountInProfile = this.profiles[i].accounts
+    console.log(this.accountInProfile)
     this.cockpitAccount =true;
-  } 
-
+  }   
   
-
-
 
   title = 'account-app';
 }

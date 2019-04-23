@@ -6,6 +6,7 @@ export class ProfileService{
     mainProfiles:Profile[] = []
 
     deleteEvent = new EventEmitter();
+    // defaultEvent = new EventEmitter<number>();
     
     getProfiles(){
         return this.mainProfiles;
@@ -16,7 +17,7 @@ export class ProfileService{
     }
     deleteProfile(i){
         this.mainProfiles.splice(i,1)
-        console.log(i)
+        
     }
 
 }
